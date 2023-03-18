@@ -1,0 +1,16 @@
+---
+export interface Props {
+  title: string;
+  href: string;
+}
+
+const { href, title, body } = Astro.props;
+---
+
+<a href={href} target="_blank" rel="noreferrer">
+  <li
+    class="w-full font-semibold px-4 py-4 text-center text-lg bg-white rounded-full text-black font-sans transition-opacity hover:bg-white/80"
+  >
+    {title}
+  </li>
+</a>
