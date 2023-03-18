@@ -13,6 +13,7 @@ export default defineConfig({
       projectId: "svg89wzf",
       dataset: "production",
       apiVersion: "2023-03-18",
+      token: process.env.SANITY_TOKEN,
     }),
   ],
 });
