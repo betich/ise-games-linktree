@@ -1,6 +1,5 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import { astroImageTools } from "astro-imagetools";
 
 import sanity from "astro-sanity";
 
@@ -8,12 +7,12 @@ import sanity from "astro-sanity";
 export default defineConfig({
   integrations: [
     tailwind(),
-    astroImageTools,
     sanity({
       projectId: "svg89wzf",
       dataset: "production",
       apiVersion: "2023-03-18",
       token: process.env.SANITY_TOKEN,
+      useCdn: false,
     }),
   ],
 });
